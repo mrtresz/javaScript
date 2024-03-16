@@ -9,3 +9,11 @@ let num2 = 7;
 console.log(addTwoNumbers(num1, num2));
 console.log(addTwoNumbers(2, 6));
 
+
+
+function nameOfFunc(num, num2) {
+    return num + num2;
+
+}
+
+

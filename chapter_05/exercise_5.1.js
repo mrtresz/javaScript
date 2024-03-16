@@ -18,4 +18,3 @@ while (solution != guess) {
     } else
         alert("you are low");
 }
-

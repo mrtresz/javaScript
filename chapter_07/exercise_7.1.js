@@ -7,6 +7,8 @@ class Person {
     }
 }
 
+
+
 let p1 = new Person("Macdonald", "Mahlalela");
 let p2 = new Person("Mandla", "Mbethe");
 let p3 = new Person("Andile", "Thwala");
