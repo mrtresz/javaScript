@@ -1,0 +1,92 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 13.2</title>
+</head>
+
+<body>
+    <script>
+        const myPromise = new Promise((resolve, reject) => {
+            resolve("start counting");
+
+
+        })
+        function counter(value) {
+            console.log(value);
+        }
+
+
+        myPromise
+            .then(value => {
+                counter(value);
+                return "One"
+            })
+            .then(value => {
+                counter(value);
+                return "Two"
+            })
+            .then(value => {
+                counter(value);
+                return "three"
+            })
+            .then(value => {
+                counter(value);
+
+            })
+
+
+
+    </script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 13.2</title>
+</head>
+
+<body>
+    <script>
+        const myPromise = new Promise((resolve, reject) => {
+            resolve("start counting");
+
+
+        })
+        function counter(value) {
+            console.log(value);
+        }
+
+
+        myPromise
+            .then(value => {
+                counter(value);
+                return "One"
+            })
+            .then(value => {
+                counter(value);
+                return "Two"
+            })
+            .then(value => {
+                counter(value);
+                return "three"
+            })
+            .then(value => {
+                counter(value);
+
+            })
+
+
+
+    </script>
+</body>
+
+>>>>>>> 1ae81a3f3df886b413a965c24c4688d09b9039d7
+</html>

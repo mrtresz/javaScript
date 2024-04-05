@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Image Gallery</h1>
+    <div id="input-container">
+        <input type="file" id="my-image" multiple>
+        <button id="add-file">Add Image</button>
+    </div>
+    <div id="image-gallery"></div>
+
+    <script>
+        "use strict";
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const imageGallery = document.getElementById('image-gallery');
+            let imgArray = JSON.parse(localStorage.getItem("images-array")) || [];
+
+            imgArray.forEach((imgSrc, index) => {
+                const imgElement = document.createElement('img');
+                imgElement.src = imgSrc;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.className = 'delete-btn';
+                deleteButton.addEventListener('click', function () {
+                    imgArray.splice(index, 1);
+                    localStorage.setItem('images-array', JSON.stringify(imgArray));
+                    location.reload();
+                });
+
+                const container = document.createElement('div');
+                container.className = 'image-container';
+                container.appendChild(imgElement);
+                container.appendChild(deleteButton);
+                imageGallery.appendChild(container);
+            });
+
+            document.querySelector('#add-file').addEventListener('click', function () {
+                const files = document.getElementById('my-image').files;
+                const reader = new FileReader();
+
+                reader.onload = function () {
+                    const imgSrc = reader.result;
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imgSrc;
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.className = 'delete-btn';
+                    deleteButton.addEventListener('click', function () {
+                        const index = imgArray.indexOf(imgSrc);
+                        if (index !== -1) {
+                            imgArray.splice(index, 1);
+                            localStorage.setItem('images-array', JSON.stringify(imgArray));
+                            location.reload();
+                        }
+                    });
+
+                    const container = document.createElement('div');
+                    container.className = 'image-container';
+                    container.appendChild(imgElement);
+                    container.appendChild(deleteButton);
+                    imageGallery.appendChild(container);
+
+                    imgArray.push(imgSrc);
+                    localStorage.setItem('images-array', JSON.stringify(imgArray));
+                    location.reload();
+                }
+
+                for (let i = 0; i < files.length; i++) {
+                    reader.readAsDataURL(files[i]);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

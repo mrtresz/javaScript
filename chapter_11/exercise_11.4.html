@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width: 150px;height: 150px;background-color: cyan;" class="blank">
+
+    </div>
+
+
+    <script>
+        "use strict";
+
+        let div = document.querySelector("div");
+        div.textContent = "Hello World!";
+
+        div.addEventListener("mousedown", function (e) {
+            changeColor("magenta", e)
+        });
+        div.addEventListener("mouseover", function (e) {
+            changeColor("cyan", e)
+        });
+        div.addEventListener("mouseout", function (e) {
+            changeColor("olive", e)
+        });
+        div.addEventListener("mouseup", function (e) {
+            changeColor("firebrick", e)
+        });
+
+        function changeColor(color, e) {
+            console.log(color);
+            console.log(e.type);
+            div.style.backgroundColor = color;
+        }
+    </script>
+</body>
+
+</html>

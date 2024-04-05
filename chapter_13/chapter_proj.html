@@ -1,0 +1,106 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Project</title>
+</head>
+
+<body>
+
+    <script>
+
+        const allowedPasswords = ["abc123", "password", "1234"];
+
+        function passwordChecker(pass) {
+            return allowed.includes(pass)
+        }
+
+        function login(password) {
+            return new Promise((resolve, reject) => {
+                if (passwordChecker(password)) {
+                    resolve({
+                        status: true
+                    });
+                } else {
+                    reject({
+                        status: false
+                    });
+                }
+            });
+        }
+        function checker(pass) {
+            login(pass)
+                .then(token => {
+                    console.log("Approve:");
+                    console.log(token);
+                })
+                .catch(value => {
+                    console.log("Reject:");
+                    console.log(value);
+                })
+        }
+        checker("1234");
+        checker("wrong");
+
+
+    </script>
+
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Project</title>
+</head>
+
+<body>
+
+    <script>
+
+        const allowedPasswords = ["abc123", "password", "1234"];
+
+        function passwordChecker(pass) {
+            return allowed.includes(pass)
+        }
+
+        function login(password) {
+            return new Promise((resolve, reject) => {
+                if (passwordChecker(password)) {
+                    resolve({
+                        status: true
+                    });
+                } else {
+                    reject({
+                        status: false
+                    });
+                }
+            });
+        }
+        function checker(pass) {
+            login(pass)
+                .then(token => {
+                    console.log("Approve:");
+                    console.log(token);
+                })
+                .catch(value => {
+                    console.log("Reject:");
+                    console.log(value);
+                })
+        }
+        checker("1234");
+        checker("wrong");
+
+
+    </script>
+
+</body>
+
+>>>>>>> 1ae81a3f3df886b413a965c24c4688d09b9039d7
+</html>

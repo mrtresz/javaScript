@@ -1,0 +1,80 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13.3</title>
+</head>
+
+<body>
+    <script>
+
+        const counter = 0;
+
+        function myFunc(x) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    counter++;
+                    resolve(`counter: ${counter}  arg:${x}`);
+
+                }, 1000)
+            })
+        }
+
+        async function output(value) {
+            console.log(`global counter: ${counter}  arg value:${value}`)
+            const res = await outputTime(value);
+            console.log(res)
+        }
+
+        for (let x = 1; x < 11; x++) {
+            output(x)
+        }
+
+
+    </script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13.3</title>
+</head>
+
+<body>
+    <script>
+
+        const counter = 0;
+
+        function myFunc(x) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    counter++;
+                    resolve(`counter: ${counter}  arg:${x}`);
+
+                }, 1000)
+            })
+        }
+
+        async function output(value) {
+            console.log(`global counter: ${counter}  arg value:${value}`)
+            const res = await outputTime(value);
+            console.log(res)
+        }
+
+        for (let x = 1; x < 11; x++) {
+            output(x)
+        }
+
+
+    </script>
+</body>
+
+>>>>>>> 1ae81a3f3df886b413a965c24c4688d09b9039d7
+</html>

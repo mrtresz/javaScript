@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prac 1</title>
+</head>
+
+<body id="body">
+    <script>
+        "use strict";
+        let colorMode = false;
+        window.onclick = changeMode;
+        let x = document.getElementById("body");
+        function changeMode() {
+
+            if (!colorMode) {
+
+                x.style.backgroundColor = "#333";
+                colorMode = true;
+            } else {
+                x.style.backgroundColor = "white";
+                colorMode = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

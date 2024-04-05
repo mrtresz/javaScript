@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "thIs will be capiTalized for each word into This Will Be Capitalized For Each Word";
+
+        function getStr(strArg) {
+            strArg.toLowerCase();
+            let upArr = [];
+            strArg.split(" ");
+            strArg.forEach(element => {
+                let fL = element.splice(0, 1).toUpperCase();
+                let fW = fL.concat(element.splice(1));
+                fW.push()
+            });
+        }
+    </script>
+</body>
+
+</html>

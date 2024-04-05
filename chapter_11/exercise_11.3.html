@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        document.addEventListener("DOMContentLoaded", (element) => {
+            message("the document has loaded:", element);
+        })
+
+        window.onload = ((e) => {
+            message("the window has loaded", e)
+        })
+
+
+
+        function message(str, object) {
+            console.log(str);
+            console.log(object);
+        }
+    </script>
+</body>
+
+</html>
